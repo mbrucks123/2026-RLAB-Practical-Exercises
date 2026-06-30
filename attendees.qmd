@@ -17,6 +17,11 @@ Community Health at Furman University.
 Ashlyn is a Graduate Student with the Department of Kinesiology at the
 University of Wisconsin - Madison.
 
+### [Stefani Baca-Atlas](attendees/StefaniBacaAtlas/about.html)
+
+Stefani is a Postdoctoral Fellow in the Carolina Population Center at the
+University of North Carolina - Chapel Hill.
+
 ### [Morgan Brucks](attendees/MorganBrucks/about.html)
 
 Morgan is a Senior Research Associate with the Department of Population Health
