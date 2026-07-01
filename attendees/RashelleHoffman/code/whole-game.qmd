@@ -1,7 +1,7 @@
 ---
 title: "The Whole Game Practice"
 subtitle: "My First GitHub Push"
-author: "Brian Helsel, PhD"
+author: "Rashelle Hoffman, PhD"
 date: 2026-06-24
 image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
 execute: 
