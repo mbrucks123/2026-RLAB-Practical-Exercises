@@ -34,7 +34,7 @@ mean(x)
 library(dplyr)
 
 starwars |>
-  mutate(name, bmi = mass / ((height / 100)^2)) |>
+  mutate(bmi = mass / ((height / 100)^2)) |>
   select(name:mass, bmi)
 
 ```

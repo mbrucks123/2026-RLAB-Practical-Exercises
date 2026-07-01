@@ -1,7 +1,7 @@
 ---
-title: "First Time Practicing Positron"
-subtitle: "Look I'm Doing It"
-author: Melissa Jenkins
+title: "Practical Exercise Template"
+subtitle: "Adjust the YAML each week when doing a new exercise"
+author: "Keith Smith"
 date: 2026-06-24
 image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
 execute: 
@@ -11,19 +11,9 @@ execute:
   warning: false
 ---
 
-**Assignment**. Practice for Dr. Julianne Clina's introduction to R presentation. 
-This Quarto document will be used to practice my first GitHub pull request.
-::: {r}
-#Hello R-LAB
-message("My first GitHub push worked!")
-x <- 1:10
-mean(x)
-:::
-
-
-
-
-
+**Assignment**. Add assignment details here. Update this section with the
+current week's tasks or instructions, and any additional resources to complete
+the assignment.
 
 ## Introduction to dplyr
 
@@ -32,7 +22,7 @@ mean(x)
 library(dplyr)
 
 starwars |>
-  mutate(name, bmi = mass / ((height / 100)^2)) |>
+  mutate(bmi = mass / ((height / 100)^2)) |>
   select(name:mass, bmi)
 
 ```

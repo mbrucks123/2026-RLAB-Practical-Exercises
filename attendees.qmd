@@ -120,6 +120,12 @@ the Tehran University of Medical Sciences.
 Leela is a Graduate Student with the Waisman Center at the University of
 Wisconsin - Madison.
 
+### [Keith Smith](attendees/KeithSmith/about.html)
+
+Keith is a Senior Research Associate with the University of Kansas Alzheimer's
+Disease Research Center in the Department of Neurology at the University of
+Kansas Medical Center.
+
 ### [Kameron Suire](attendees/KameronSuire/about.html)
 
 Kameron is an Assistant Professor of Exercise Science with the Department of

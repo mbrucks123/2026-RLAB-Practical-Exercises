@@ -1,0 +1,27 @@
+---
+title: "Week 1: Basics in R"
+subtitle: "Practice Reading and Manipulating Data"
+author: David Titus
+date: 2026-06-24
+image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
+execute: 
+  echo: true
+  eval: true
+  message: false
+  warning: false
+---
+
+**Assignment**. Practice for Dr. Julianne Clina's introduction to R presentation. 
+This Quarto document will be used to practice my first GitHub pull request.
+
+## Hello R-LAB
+
+```{r}
+library(dplyr)
+message("My first GitHub push worked!")
+x <- 1:10
+mean(x)
+
+
+```
+
