@@ -1,8 +1,8 @@
 ---
 title: "Transform"
 subtitle: "Practice using the dplyr functions with the nycflights13 data sets"
-author: "Brian Helsel, PhD"
-date: 2026-06-24
+author: "David Titus"
+date: 2026-07-01
 image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
 execute: 
   echo: true
@@ -28,7 +28,7 @@ library(nycflights13)
 **To access one of the data sets**: 
 
 ```{r}
-?flights
+names (flights)
 ```
 
 **To view a description of the variables in a nycflights13 data set**: 
@@ -37,6 +37,7 @@ library(nycflights13)
 #| eval: false
 
 ?nycflights13::flights
+
 ```
 
 ## Filtering by Air Time
@@ -47,9 +48,15 @@ hours.
 
 
 ```{r}
-
+library(tidyverse)
 # Code here...
+flights<- nycflights13::flights
+ nrow(flights)
 
+flights <- flights |>
+  dplyr::filter(air_time >= 120 & air_time <240)
+flights
+nrow(flights)
 ```
 
 ## Date and Time Variable
@@ -59,10 +66,17 @@ variable. Use this date variable to modify the `dep_time` and `arr_time` to
 create time stamps.
 
 ```{r}
-
 # Code here...
+flights <- flights |>
+    dplyr::mutate(
+     date = lubridate::make_date(year, month, day),
+     dep_time = lubridate::make_datetime(year, month, day,  dep_time %/% 100, dep_time %% 100),
+     arr_time = lubridate::make_datetime(year, month, day, arr_time %/% 100, arr_time %% 100)
 
-```
+  )
+
+flights
+``` 
 
 **Hint**: Look at the `nycflights13::flights` documentation to review the format
 of the `dep_time` and `arr_time` variables. Zero padding can be added with
@@ -76,9 +90,15 @@ United Airlines.
 
 
 ```{r}
+#nycflights13::airports|>
+  #dplyr::filter(stringr::str_detect(name, "Orlando"))
 
 # Code here...
-
+flights <- flights |> 
+ dplyr::filter(carrier %in% c("AA",  "DL",  "UA") & dest%in% c("MIA",   "FLL" ,  "MCO"))
+nrow(flights)
+table(flights$carrier)
+flights
 ```
 
 ## Factor Variables
@@ -90,7 +110,16 @@ factor variable for `dest` that includes Orlando, Fort Lauderdale, and Miami.
 ```{r}
 
 # Code here...
+flights <- flights |>
 
+  dplyr::mutate(
+
+    carrier = factor(carrier, levels = c("AA", "DL", "UA"), labels = c("American Airlines", "Delta Air Lines", "United Airlines")),
+
+    dest = factor(dest, levels = c("MIA", "FLL", "MCO"), labels = c("Miami", "Fort Lauderdale", "Orlando"))
+
+  )
+  flights
 ```
 
 
@@ -103,7 +132,14 @@ that you need as identifers to merge with the flights data set.
 ```{r}
 
 ## Code here
+#names(nycflights13::weather)
+weather_subset <- nycflights13::weather |>
+  dplyr::select(origin, time_hour, temp, wind_speed)
+weather_subset
 
+flights <- flights |>
+  dplyr::left_join(weather_subset, by = c("origin", "time_hour"))
+flights
 ```
 
 ## Run a Summary Table
@@ -119,7 +155,7 @@ publication-ready tables.
 #| eval: false
 
 # Install the gtsummary package if not already installed
-# install.packages("gtsummary")
+install.packages("gtsummary")
 
 flights |>
   dplyr::select(carrier, dest, temp, wind_speed, air_time, distance) |>
