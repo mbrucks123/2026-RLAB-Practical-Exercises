@@ -1,6 +1,6 @@
 ---
-title: "Practical Exercise Template"
-subtitle: "Adjust the YAML each week when doing a new exercise"
+title: "Week 1: Basics in R"
+subtitle: "Practice Reading and Manipulating Data"
 author: David Titus
 date: 2026-06-24
 image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
@@ -22,9 +22,8 @@ the assignment.
 library(dplyr)
 
 starwars |>
-  mutate(name, bmi = mass / ((height / 100)^2)) |>
+  mutate(bmi = mass / ((height / 100)^2)) |>
   select(name:mass, bmi)
-
 ```
 
 ## Introduction to ggplot2
@@ -35,5 +34,5 @@ library(ggplot2)
 
 ggplot(mpg, aes(displ, hwy, colour = class)) +
   geom_point()
-
 ```
+

@@ -1,0 +1,20 @@
+---
+title: "The whole game practice"
+subtitle: "Adjust the YAML each week when doing a new exercise"
+author: Morgan Brucks
+date: 2026-06-24
+image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
+execute: 
+  echo: true
+  eval: true
+  message: false
+  warning: false
+---
+
+
+```{r}
+message("First time using the insert code chunk button!")
+
+x <- 1:10
+mean(x)
+```

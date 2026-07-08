@@ -1,7 +1,7 @@
 ---
 title: "Practical Exercise Template"
-subtitle: "Adjust the YAML each week when doing a new exercise"
-author: Abass Babatunde
+subtitle: "Fist Github Push"
+author: "Abass Babatunde, PhD"
 date: 2026-06-24
 image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
 execute: 
@@ -15,6 +15,18 @@ execute:
 current week's tasks or instructions, and any additional resources to complete
 the assignment.
 
+
+
+```{r}
+# Hello R-LAB
+message("My first GitHub push worked!")
+x <- 1:10
+mean(x)
+```
+
+
+
+
 ## Introduction to dplyr
 
 ```{r}
@@ -22,7 +34,7 @@ the assignment.
 library(dplyr)
 
 starwars |>
-  mutate(name, bmi = mass / ((height / 100)^2)) |>
+  mutate(bmi = mass / ((height / 100)^2)) |>
   select(name:mass, bmi)
 
 ```

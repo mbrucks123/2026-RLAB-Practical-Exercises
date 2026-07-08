@@ -22,9 +22,8 @@ the assignment.
 library(dplyr)
 
 starwars |>
-  mutate(name, bmi = mass / ((height / 100)^2)) |>
+  mutate(bmi = mass / ((height / 100)^2)) |>
   select(name:mass, bmi)
-
 ```
 
 ## Introduction to ggplot2
@@ -35,6 +34,5 @@ library(ggplot2)
 
 ggplot(mpg, aes(displ, hwy, colour = class)) +
   geom_point()
-
 ```
 
