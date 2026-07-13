@@ -32,6 +32,7 @@ jobs:
             any::tidyverse
             any::palmerpenguins
             any::gtsummary
+            any::nycflights13
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
