@@ -2,7 +2,7 @@
 title: "ggplot2 Hands-On Practice: Solutions"
 subtitle: "Adjust the YAML each week when doing a new exercise"
 author: Ashlyn Barry
-date: 2026-06-24
+date: 2026-07-08
 image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
 execute: 
   echo: true
@@ -11,6 +11,9 @@ execute:
   warning: false
 ---
 
+“Find the solutions to “ggplot2 Hands-On Practice” here! Please attempt all
+exercises on your own first, using the “Data Visualization” presentation as a
+guide. Use this file to check your work or debug your own code.”
 
 ```{r setup}
 library(tidyverse)
