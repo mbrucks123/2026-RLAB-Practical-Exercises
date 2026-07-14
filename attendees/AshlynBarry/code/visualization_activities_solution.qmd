@@ -1,19 +1,33 @@
 ---
 title: "ggplot2 Hands-On Practice: Solutions"
-format: html
+subtitle: "Adjust the YAML each week when doing a new exercise"
+author: Ashlyn Barry
+date: 2026-06-24
+image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
+execute: 
+  echo: true
+  eval: true
+  message: false
+  warning: false
 ---
-```{r setup, include=FALSE}
+
+
+```{r setup}
 library(tidyverse)
 library(palmerpenguins)
 ```
 
 ## Activity 1 Solution: Fill in the blanks
 ```{r}
-#| echo: true
-#| eval: true
+
 ggplot(
   data = penguins,
-  mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = species, shape = species)
+  mapping = aes(
+    x = bill_length_mm,
+    y = bill_depth_mm,
+    color = species,
+    shape = species
+  )
 ) +
   geom_point() +
   labs(
@@ -29,8 +43,7 @@ ggplot(
 
 ## Activity 2: Update the facet plots
 ```{r}
-#| echo: true
-#| eval: true
+
 my.theme <- theme_minimal() +
   theme(
     plot.title = element_text(hjust = 1),
@@ -46,7 +59,7 @@ ggplot(
   mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)
 ) +
   geom_point() +
-  facet_wrap(~ species) +
+  facet_wrap(~species) +
   labs(
     title = "Penguin body mass by flipper length",
     subtitle = "Faceted by species",
@@ -61,8 +74,7 @@ ggplot(
 ## Activity 3: Create figure using new dataset
 
 ```{r}
-#| echo: true
-#| eval: true
+
 my.theme <- theme_minimal() +
   theme(
     plot.title = element_text(hjust = 0.5),
@@ -80,7 +92,7 @@ ggplot(
   geom_point(size = 2) +
   geom_smooth(method = "lm", se = FALSE) +
   facet_wrap(
-    ~ am,
+    ~am,
     labeller = labeller(am = c("0" = "Automatic", "1" = "Manual"))
   ) +
   labs(

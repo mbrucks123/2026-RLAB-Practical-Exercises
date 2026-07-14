@@ -1,9 +1,17 @@
 ---
 title: "ggplot2 Hands-On Practice"
-format: html
+subtitle: "Adjust the YAML each week when doing a new exercise"
+author: Ashlyn Barry
+date: 2026-06-24
+image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
+execute: 
+  echo: true
+  eval: false
+  message: false
+  warning: false
 ---
 
-```{r setup, include=FALSE}
+```{r setup}
 library(tidyverse)
 library(palmerpenguins)
 ```
@@ -20,7 +28,7 @@ species, using what you learned today.
 **Instructions:** Fill in the `___` blanks to complete the code. Run it and
 check that your plot displays correctly!
 
-```{r beginner, eval=FALSE}
+```{r beginner}
 ggplot(
   ___ = penguins,
   mapping = aes(x = bill_length_mm, y = ___, color = ___)
@@ -34,7 +42,7 @@ ggplot(
   ) +
   theme_minimal() +
   theme(
-    plot.title = element_text(___ = 0.5), 
+    plot.title = element_text(___ = 0.5),
     plot.subtitle = element_text(___ = 0.5)
   )
 ```
@@ -73,20 +81,20 @@ may overlap the facets; adjust it to `"bottom"` instead
 **Bonus:** Try `facet_grid(sex ~ species)` instead of `facet_wrap(~ species)`.
 What changes? What does this tell you that the original plot didn't?
 
-```{r intermediate, eval=FALSE}
+```{r intermediate}
 # Facet plots from presentation - modify according to instructions above
-  ggplot(
-    data = penguins,
-    mapping = aes(x = flipper_length_mm, y = body_mass_g)
-  ) +
-    geom_point() +
-    facet_wrap(~ species) +
-    labs(
-      title = "Penguin body mass by flipper length",
-      subtitle = "Faceted by species",
-      x = "Flipper length (mm)",
-      y = "Body Mass (g)"
-    )
+ggplot(
+  data = penguins,
+  mapping = aes(x = flipper_length_mm, y = body_mass_g)
+) +
+  geom_point() +
+  facet_wrap(~species) +
+  labs(
+    title = "Penguin body mass by flipper length",
+    subtitle = "Faceted by species",
+    x = "Flipper length (mm)",
+    y = "Body Mass (g)"
+  )
 ```
 
 ---
@@ -124,7 +132,7 @@ efficiency differ by number of cylinders?*
 5. Applies a clean custom theme
 6. Has polished axis labels, a title, and a subtitle
 
-```{r advanced, eval=FALSE}
+```{r advanced}
 # Your code here!
 ```
 
