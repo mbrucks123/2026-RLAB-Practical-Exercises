@@ -4,10 +4,6 @@ subtitle: "Files, databases, and web data"
 author: Brian Helsel
 date: 2026-07-15
 image: "https://github.com/bhelsel/2026-RLAB-Practical-Exercises/raw/main/images/rlab-placeholder.png"
-categories:
-  - Data Import
-  - R4DS
-  - tidyverse
 execute:
   echo: true
   eval: true
